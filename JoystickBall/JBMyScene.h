@@ -8,6 +8,11 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface JBMyScene : SKScene
+// These constans are used to define the physics interactions between physics bodies in the scene.
+static const uint32_t starCategory  =  0x1 << 0;
+static const uint32_t ballCategory  =  0x1 << 1;
+static const uint32_t edgeCategory  =  0x1 << 2;
+
+@interface JBMyScene : SKScene <SKPhysicsContactDelegate>
 
 @end

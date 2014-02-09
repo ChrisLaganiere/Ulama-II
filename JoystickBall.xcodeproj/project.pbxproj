@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832368E718A5E9F60077CDAA /* joystickBase@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 832368E618A5E9F60077CDAA /* joystickBase@2x.png */; };
 		83FE315E18A4ABA000B4D1DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FE315D18A4ABA000B4D1DE /* Foundation.framework */; };
 		83FE316018A4ABA000B4D1DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FE315F18A4ABA000B4D1DE /* CoreGraphics.framework */; };
 		83FE316218A4ABA000B4D1DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FE316118A4ABA000B4D1DE /* UIKit.framework */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		832368E618A5E9F60077CDAA /* joystickBase@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "joystickBase@2x.png"; sourceTree = "<group>"; };
 		83FE315A18A4ABA000B4D1DE /* JoystickBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JoystickBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FE315D18A4ABA000B4D1DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83FE315F18A4ABA000B4D1DE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -176,6 +178,7 @@
 		83FE319918A4B39700B4D1DE /* images */ = {
 			isa = PBXGroup;
 			children = (
+				832368E618A5E9F60077CDAA /* joystickBase@2x.png */,
 				83FE319E18A4BC7F00B4D1DE /* joystick_hold.png */,
 				83FE319F18A4BC7F00B4D1DE /* joystick_normal.png */,
 				83FE319C18A4B8C800B4D1DE /* joystickBase.png */,
@@ -265,6 +268,7 @@
 				83FE316A18A4ABA000B4D1DE /* InfoPlist.strings in Resources */,
 				83FE317D18A4ABA000B4D1DE /* Images.xcassets in Resources */,
 				83FE317B18A4ABA000B4D1DE /* Spaceship.png in Resources */,
+				832368E718A5E9F60077CDAA /* joystickBase@2x.png in Resources */,
 				83FE317318A4ABA000B4D1DE /* Main.storyboard in Resources */,
 				83FE319B18A4B39700B4D1DE /* ball80.png in Resources */,
 				83FE31A118A4BC7F00B4D1DE /* joystick_normal.png in Resources */,

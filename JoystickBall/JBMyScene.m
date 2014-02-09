@@ -8,7 +8,10 @@
 
 #import "JBMyScene.h"
 
-#define STICK_CENTER_TARGET_POS_LEN 20.0f
+#define STICK_CENTER_TARGET_POS_LEN 80.0f
+#define starTimerMax 150
+#define difficultyTime 1500
+#define forceVar 25
 
 @interface JBMyScene()
 
@@ -17,6 +20,11 @@
 @property SKSpriteNode *ball;
 @property bool touching;
 @property CGVector forceVector;
+@property int starCounter;
+@property int starTimer;
+@property int maxStars;
+@property int difficultyTimer;
+@property double ballScale;
 
 @end
 
@@ -31,15 +39,21 @@
         self.backgroundColor = [SKColor grayColor];
         self.anchorPoint = CGPointMake (0.5,0.5);
         
-        
-        
-        // 1 Create a physics body that borders the screen
         CGRect myFrame = CGRectMake(2*self.frame.origin.x,2*self.frame.origin.y, self.frame.size.width, self.frame.size.height); //adjusting for anchorpoint
-        SKPhysicsBody* borderBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:myFrame];
-        // 2 Set physicsBody of scene to borderBody
-        self.physicsBody = borderBody;
-        // 3 Set the friction of that physicsBody to 0
-        self.physicsBody.friction = 0.0f;
+        self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:myFrame];
+        self.physicsBody.categoryBitMask = edgeCategory;
+        self.physicsBody.collisionBitMask = 0;
+        self.physicsBody.contactTestBitMask = 0;
+        self.physicsWorld.gravity = CGVectorMake(3,3);
+        self.physicsWorld.contactDelegate = self;
+        
+        self.starTimer = arc4random() % starTimerMax;
+        self.maxStars = 2;
+        self.difficultyTimer = difficultyTime;
+        self.ballScale = 1.0;
+        
+        // Create a physics body that borders the screen
+        
          
         
         
@@ -50,13 +64,14 @@
         ball.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:ball.frame.size.width/2];
         ball.physicsBody.mass = 2.0f;
         ball.physicsBody.friction = 0.4f;
-        ball.physicsBody.restitution = 1.0f; //bounciness
+        ball.physicsBody.restitution = 0.3f; //bounciness
         ball.physicsBody.dynamic = YES;
+        
+        ball.physicsBody.categoryBitMask = ballCategory;
+        ball.physicsBody.collisionBitMask = edgeCategory;
+        ball.physicsBody.contactTestBitMask = starCategory;
         [self addChild:ball];
         self.ball = ball;
-        
-        
-
     }
     return self;
 }
@@ -109,28 +124,42 @@
         dir.x = 0;
         dir.y = 0;
     }
-    else
+    
+    else if (len >= STICK_CENTER_TARGET_POS_LEN || len <= -STICK_CENTER_TARGET_POS_LEN)
     {
-        double len_inv = (1.0 / len);
-        dir.x *= len_inv;
-        dir.y *= len_inv;
-        dtarget.x = dir.x * STICK_CENTER_TARGET_POS_LEN;
-        dtarget.y = dir.y * STICK_CENTER_TARGET_POS_LEN;
+        //double len_inv = (1.0 / len);
+        //dir.x *= len_inv;
+        //dir.y *= len_inv;
+        dir.x = (1.0/len) * dir.x * STICK_CENTER_TARGET_POS_LEN;
+        dir.y = (1.0/len) * dir.y * STICK_CENTER_TARGET_POS_LEN;
     }
     
-    //[self.ball.physicsBody applyImpulse:CGVectorMake(10.0f, -10.0f)];
-    self.forceVector = CGVectorMake(50*dtarget.x, 50*dtarget.y);
+    
+    self.forceVector = CGVectorMake(forceVar*dir.x, forceVar*dir.y);
     [self applyForce];
     
-    self.joystickControl.position = dtarget;
-    
-    
+    self.joystickControl.position = dir;
 }
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
     if (self.touching) {
         [self applyForce];
+    }
+    
+    if (self.difficultyTimer <= 0) {
+        //increase number of objects to hit
+        self.maxStars++;
+        self.difficultyTimer = difficultyTime;
+    } else {
+        self.difficultyTimer--;
+    }
+    
+    if (self.starTimer < 1) {
+        [self addStar];
+        self.starTimer = arc4random() % starTimerMax;
+    } else {
+        self.starTimer--;
     }
 }
 
@@ -156,11 +185,82 @@
     self.joystickBase.position = location;
 }
 
-#pragma mark ball action
+#pragma mark physics
 
--(void)applyForce
+-(void)applyForce //on ball
 {
     [self.ball.physicsBody applyForce:self.forceVector];
+}
+- (void)didBeginContact:(SKPhysicsContact *)contact
+{
+    // Handle contacts between two physics bodies.
+    SKPhysicsBody *firstBody;
+    SKPhysicsBody *secondBody;
+    
+    if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask)
+    {
+        firstBody = contact.bodyA;
+        secondBody = contact.bodyB;
+    }
+    else
+    {
+        firstBody = contact.bodyB;
+        secondBody = contact.bodyA;
+    }
+    
+    // Asteroids that hit planets are destroyed.
+    if (((firstBody.categoryBitMask & starCategory) != 0) &&
+        ((secondBody.categoryBitMask & ballCategory) != 0))
+    {
+        self.starCounter--;
+        //[firstBody.node removeFromParent];
+        [firstBody.node runAction:[SKAction fadeAlphaBy:-.5 duration:1] completion:^{
+            [firstBody.node removeFromParent];
+        }];
+    }
+}
+
+#pragma mark extras
+
+-(void)addStar
+{
+    if (self.starCounter >= self.maxStars) return;
+    
+    SKSpriteNode *newStar = [SKSpriteNode spriteNodeWithColor:[UIColor yellowColor] size:CGSizeMake(50, 50)];
+    int realX = self.size.width/2;
+    int realY = self.size.height/2;
+    int randomX = arc4random() % realX;
+    int randomY = arc4random() % realY;
+    
+    if (arc4random() % 2) randomX *= -1;
+    if (arc4random() % 2) randomY *= -1;
+    
+    CGPoint starPos = CGPointMake(randomX, randomY);
+    newStar.position = starPos;
+    newStar.name = @"star";
+    newStar.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:newStar.size];
+    newStar.physicsBody.categoryBitMask = starCategory;
+    newStar.physicsBody.collisionBitMask = ballCategory | edgeCategory;
+    newStar.physicsBody.contactTestBitMask = 0;
+    
+    [self addChild:newStar];
+    
+    SKAction *starAct = [SKAction group:@[[SKAction colorizeWithColor:[UIColor redColor] colorBlendFactor:0.5 duration:10], [SKAction scaleBy:0.3 duration:10]]];
+    
+    [newStar runAction:starAct completion:^{
+        [self endGame];
+    }];
+    
+    self.starCounter++;
+}
+
+-(void)endGame
+{
+    NSLog(@"game over");
+    [self enumerateChildNodesWithName:@"star" usingBlock:^(SKNode *node, BOOL *stop) {
+        [node removeFromParent];
+        self.starCounter--;
+    }];
 }
 
 @end
