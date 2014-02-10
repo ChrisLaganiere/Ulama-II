@@ -10,8 +10,9 @@
 
 #define STICK_CENTER_TARGET_POS_LEN 80.0f
 #define starTimerMax 150
-#define difficultyTime 1500
+#define difficultyTime 500
 #define forceVar 25
+#define initialMaxStars 2
 
 @interface JBMyScene()
 
@@ -54,7 +55,7 @@
         self.physicsWorld.contactDelegate = self;
         
         self.starTimer = arc4random() % starTimerMax;
-        self.maxStars = 2;
+        self.maxStars = initialMaxStars;
         self.difficultyTimer = difficultyTime;
         self.ballScale = 1.0;
         
@@ -231,6 +232,7 @@
         self.starCounter--;
         self.score++;
         self.scoreReport.text = [NSString stringWithFormat:@"%i",self.score];
+        [firstBody.node removeAllActions];
         [firstBody.node runAction:[SKAction fadeAlphaBy:-1.0 duration:1] completion:^{
             [firstBody.node removeFromParent];
         }];
@@ -274,6 +276,9 @@
                                                [SKAction waitForDuration:2.5]]];
     
     [newStar runAction:starAct completion:^{
+        //no more collisions
+        newStar.physicsBody.collisionBitMask = edgeCategory;
+        newStar.physicsBody.contactTestBitMask = edgeCategory;
         //don't place any more stars
         self.starTimer = 10000;
         //kill other stars
@@ -284,10 +289,12 @@
             }
         }];
         [self preEndGame];
+        [self runAction:[SKAction waitForDuration:3.0] completion:^{
+            [self endGame];
+        }];
 
         [newStar runAction:starDeath completion:^{
             //kill other stars
-                        [self endGame];
         }];
     }];
     
@@ -361,6 +368,7 @@
     self.score = 0;
     self.scoreReport.text = [NSString stringWithFormat:@"%i",self.score];
     self.starTimer = arc4random() % starTimerMax;
+    self.maxStars = initialMaxStars;
 }
 
 @end
