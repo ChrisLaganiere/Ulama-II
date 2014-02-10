@@ -25,6 +25,10 @@
 @property int maxStars;
 @property int difficultyTimer;
 @property double ballScale;
+@property int score;
+@property SKLabelNode *scoreReport;
+@property SKLabelNode *highscore;
+@property SKLabelNode *scoreLabel;
 
 @end
 
@@ -36,7 +40,9 @@
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
-        self.backgroundColor = [SKColor grayColor];
+        self.backgroundColor = [UIColor colorWithRed:
+                                0.390625 green:0.83203125 blue:
+                                0.390625 alpha:1.0];
         self.anchorPoint = CGPointMake (0.5,0.5);
         
         CGRect myFrame = CGRectMake(2*self.frame.origin.x,2*self.frame.origin.y, self.frame.size.width, self.frame.size.height); //adjusting for anchorpoint
@@ -51,11 +57,6 @@
         self.maxStars = 2;
         self.difficultyTimer = difficultyTime;
         self.ballScale = 1.0;
-        
-        // Create a physics body that borders the screen
-        
-         
-        
         
         self.physicsWorld.gravity = CGVectorMake(0, 0);
         
@@ -72,6 +73,21 @@
         ball.physicsBody.contactTestBitMask = starCategory;
         [self addChild:ball];
         self.ball = ball;
+        
+        self.score = 0;
+        SKLabelNode *scoreReport = [SKLabelNode labelNodeWithFontNamed:@"Imagine Font"];
+        scoreReport.fontSize = 45.0;
+        scoreReport.fontColor = [UIColor whiteColor];
+        scoreReport.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeRight;
+        scoreReport.verticalAlignmentMode = SKLabelVerticalAlignmentModeTop;
+        scoreReport.position = CGPointMake(self.frame.size.width/2-45,self.frame.size.height/2-45);
+        scoreReport.text = [NSString stringWithFormat:@"%i",self.score];
+        [self addChild:scoreReport];
+        self.scoreReport = scoreReport;
+        
+        if (![[NSUserDefaults standardUserDefaults] integerForKey:@"highscore"]) {
+            [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"highscore"];
+        }
     }
     return self;
 }
@@ -210,13 +226,15 @@
     
     // Asteroids that hit planets are destroyed.
     if (((firstBody.categoryBitMask & starCategory) != 0) &&
-        ((secondBody.categoryBitMask & ballCategory) != 0))
+        ((secondBody.categoryBitMask & ballCategory) != 0) && ([firstBody.node.userData valueForKey:@"killed"] == [NSNumber numberWithBool:FALSE]))
     {
         self.starCounter--;
-        //[firstBody.node removeFromParent];
-        [firstBody.node runAction:[SKAction fadeAlphaBy:-.5 duration:1] completion:^{
+        self.score++;
+        self.scoreReport.text = [NSString stringWithFormat:@"%i",self.score];
+        [firstBody.node runAction:[SKAction fadeAlphaBy:-1.0 duration:1] completion:^{
             [firstBody.node removeFromParent];
         }];
+        [firstBody.node.userData setValue:[NSNumber numberWithBool:TRUE] forKey:@"killed"];
     }
 }
 
@@ -226,7 +244,7 @@
 {
     if (self.starCounter >= self.maxStars) return;
     
-    SKSpriteNode *newStar = [SKSpriteNode spriteNodeWithColor:[UIColor yellowColor] size:CGSizeMake(50, 50)];
+    SKSpriteNode *newStar = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size:CGSizeMake(50, 50)];
     int realX = self.size.width/2;
     int realY = self.size.height/2;
     int randomX = arc4random() % realX;
@@ -243,24 +261,106 @@
     newStar.physicsBody.collisionBitMask = ballCategory | edgeCategory;
     newStar.physicsBody.contactTestBitMask = 0;
     
+    newStar.userData = [NSMutableDictionary dictionary];
+    
+    [newStar.userData setValue:[NSNumber numberWithBool:FALSE] forKey:@"killed"];
+    
     [self addChild:newStar];
     
     SKAction *starAct = [SKAction group:@[[SKAction colorizeWithColor:[UIColor redColor] colorBlendFactor:0.5 duration:10], [SKAction scaleBy:0.3 duration:10]]];
+    SKAction *starDeath = [SKAction sequence:@[[SKAction colorizeWithColor:[UIColor whiteColor] colorBlendFactor:1.0 duration:0],
+                                               [SKAction scaleBy:6.0 duration:0],
+                                               [SKAction fadeAlphaBy:-1.0 duration:.5],
+                                               [SKAction waitForDuration:2.5]]];
     
     [newStar runAction:starAct completion:^{
-        [self endGame];
+        //don't place any more stars
+        self.starTimer = 10000;
+        //kill other stars
+        [self enumerateChildNodesWithName:@"star" usingBlock:^(SKNode *node, BOOL *stop) {
+            if (node != newStar) {
+                [node removeFromParent];
+                self.starCounter--;
+            }
+        }];
+        [self preEndGame];
+
+        [newStar runAction:starDeath completion:^{
+            //kill other stars
+                        [self endGame];
+        }];
     }];
     
     self.starCounter++;
 }
 
+-(void)preEndGame
+{
+    if (self.highscore) {
+        [self.highscore removeFromParent];
+        self.highscore = nil;
+    }
+    if (self.scoreLabel) {
+        [self.scoreLabel removeFromParent];
+        self.scoreLabel = nil;
+    }
+    if (self.score > [[NSUserDefaults standardUserDefaults] integerForKey:@"highscore"]) {
+        [[NSUserDefaults standardUserDefaults] setInteger:self.score forKey:@"highscore"];
+    }
+    
+    SKLabelNode *highscore = [SKLabelNode labelNodeWithFontNamed:@"Imagine Font"];
+    
+    highscore.text = [NSString stringWithFormat:@"Score: %i\n", self.score];
+    highscore.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
+    highscore.verticalAlignmentMode = SKLabelVerticalAlignmentModeTop;
+    highscore.fontSize = 45;
+    highscore.position = CGPointMake(-self.frame.size.width/2+45, self.frame.size.height/2-45);
+    [highscore runAction:[SKAction sequence:@[
+                                              [SKAction waitForDuration:3.0],
+                                              [SKAction fadeAlphaBy:-1.0 duration:2.0]
+                                              ]] completion:^{
+        [highscore removeFromParent];
+    }];
+    [self addChild:highscore];
+    self.highscore = highscore;
+    
+    SKLabelNode *scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Imagine Font"];
+    
+    scoreLabel.text = [NSString stringWithFormat:@"High: %li\n", (long)[[NSUserDefaults standardUserDefaults] integerForKey:@"highscore"]];
+    scoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
+    scoreLabel.verticalAlignmentMode = SKLabelVerticalAlignmentModeTop;
+    scoreLabel.fontSize = 45;
+    scoreLabel.position = CGPointMake(-self.frame.size.width/2+45, self.frame.size.height/2-100);
+    [scoreLabel runAction:[SKAction sequence:@[
+                                              [SKAction waitForDuration:3.0],
+                                              [SKAction fadeAlphaBy:-1.0 duration:2.0]
+                                              ]] completion:^{
+        [scoreLabel removeFromParent];
+    }];
+    [self addChild:scoreLabel];
+    self.scoreLabel = scoreLabel;
+    
+    
+}
+
 -(void)endGame
 {
-    NSLog(@"game over");
+    //kill last star
     [self enumerateChildNodesWithName:@"star" usingBlock:^(SKNode *node, BOOL *stop) {
         [node removeFromParent];
         self.starCounter--;
     }];
+    
+    NSLog(@"game over");
+    CGFloat hue = ( arc4random() % 256 / 256.0 ); // 0.0 to 1.0
+    CGFloat saturation = ( arc4random() % 128 / (128/0.2) ) + 0.8; // 0.5 to 1.0, away from white
+    CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5; // 0.5 to 1.0, away from black
+    UIColor *color = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
+    self.backgroundColor = color;
+    
+    self.score = 0;
+    self.scoreReport.text = [NSString stringWithFormat:@"%i",self.score];
+    self.starTimer = arc4random() % starTimerMax;
 }
 
 @end

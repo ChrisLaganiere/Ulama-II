@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		832368E718A5E9F60077CDAA /* joystickBase@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 832368E618A5E9F60077CDAA /* joystickBase@2x.png */; };
+		8345BB5E18A89B8C00CDC45F /* JBMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8345BB5D18A89B8C00CDC45F /* JBMenuViewController.m */; };
+		8345BB6018A89C9700CDC45F /* imagine_font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8345BB5F18A89C9700CDC45F /* imagine_font.otf */; };
+		8345BB6218A8AEAC00CDC45F /* ball80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8345BB6118A8AEAC00CDC45F /* ball80@2x.png */; };
 		83FE315E18A4ABA000B4D1DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FE315D18A4ABA000B4D1DE /* Foundation.framework */; };
 		83FE316018A4ABA000B4D1DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FE315F18A4ABA000B4D1DE /* CoreGraphics.framework */; };
 		83FE316218A4ABA000B4D1DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FE316118A4ABA000B4D1DE /* UIKit.framework */; };
@@ -18,7 +21,6 @@
 		83FE317318A4ABA000B4D1DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FE317118A4ABA000B4D1DE /* Main.storyboard */; };
 		83FE317618A4ABA000B4D1DE /* JBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FE317518A4ABA000B4D1DE /* JBViewController.m */; };
 		83FE317918A4ABA000B4D1DE /* JBMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FE317818A4ABA000B4D1DE /* JBMyScene.m */; };
-		83FE317B18A4ABA000B4D1DE /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 83FE317A18A4ABA000B4D1DE /* Spaceship.png */; };
 		83FE317D18A4ABA000B4D1DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83FE317C18A4ABA000B4D1DE /* Images.xcassets */; };
 		83FE318418A4ABA000B4D1DE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FE318318A4ABA000B4D1DE /* XCTest.framework */; };
 		83FE318518A4ABA000B4D1DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FE315D18A4ABA000B4D1DE /* Foundation.framework */; };
@@ -43,6 +45,10 @@
 
 /* Begin PBXFileReference section */
 		832368E618A5E9F60077CDAA /* joystickBase@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "joystickBase@2x.png"; sourceTree = "<group>"; };
+		8345BB5C18A89B8C00CDC45F /* JBMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBMenuViewController.h; sourceTree = "<group>"; };
+		8345BB5D18A89B8C00CDC45F /* JBMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBMenuViewController.m; sourceTree = "<group>"; };
+		8345BB5F18A89C9700CDC45F /* imagine_font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = imagine_font.otf; sourceTree = "<group>"; };
+		8345BB6118A8AEAC00CDC45F /* ball80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball80@2x.png"; sourceTree = "<group>"; };
 		83FE315A18A4ABA000B4D1DE /* JoystickBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JoystickBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FE315D18A4ABA000B4D1DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83FE315F18A4ABA000B4D1DE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,7 +65,6 @@
 		83FE317518A4ABA000B4D1DE /* JBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBViewController.m; sourceTree = "<group>"; };
 		83FE317718A4ABA000B4D1DE /* JBMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBMyScene.h; sourceTree = "<group>"; };
 		83FE317818A4ABA000B4D1DE /* JBMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBMyScene.m; sourceTree = "<group>"; };
-		83FE317A18A4ABA000B4D1DE /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		83FE317C18A4ABA000B4D1DE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		83FE318218A4ABA000B4D1DE /* JoystickBallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JoystickBallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FE318318A4ABA000B4D1DE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -131,6 +136,7 @@
 		83FE316518A4ABA000B4D1DE /* JoystickBall */ = {
 			isa = PBXGroup;
 			children = (
+				8345BB5F18A89C9700CDC45F /* imagine_font.otf */,
 				83FE319918A4B39700B4D1DE /* images */,
 				83FE316E18A4ABA000B4D1DE /* JBAppDelegate.h */,
 				83FE316F18A4ABA000B4D1DE /* JBAppDelegate.m */,
@@ -139,9 +145,10 @@
 				83FE317518A4ABA000B4D1DE /* JBViewController.m */,
 				83FE317718A4ABA000B4D1DE /* JBMyScene.h */,
 				83FE317818A4ABA000B4D1DE /* JBMyScene.m */,
-				83FE317A18A4ABA000B4D1DE /* Spaceship.png */,
 				83FE317C18A4ABA000B4D1DE /* Images.xcassets */,
 				83FE316618A4ABA000B4D1DE /* Supporting Files */,
+				8345BB5C18A89B8C00CDC45F /* JBMenuViewController.h */,
+				8345BB5D18A89B8C00CDC45F /* JBMenuViewController.m */,
 			);
 			path = JoystickBall;
 			sourceTree = "<group>";
@@ -183,6 +190,7 @@
 				83FE319F18A4BC7F00B4D1DE /* joystick_normal.png */,
 				83FE319C18A4B8C800B4D1DE /* joystickBase.png */,
 				83FE319A18A4B39700B4D1DE /* ball80.png */,
+				8345BB6118A8AEAC00CDC45F /* ball80@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -267,10 +275,11 @@
 				83FE319D18A4B8C800B4D1DE /* joystickBase.png in Resources */,
 				83FE316A18A4ABA000B4D1DE /* InfoPlist.strings in Resources */,
 				83FE317D18A4ABA000B4D1DE /* Images.xcassets in Resources */,
-				83FE317B18A4ABA000B4D1DE /* Spaceship.png in Resources */,
 				832368E718A5E9F60077CDAA /* joystickBase@2x.png in Resources */,
 				83FE317318A4ABA000B4D1DE /* Main.storyboard in Resources */,
+				8345BB6218A8AEAC00CDC45F /* ball80@2x.png in Resources */,
 				83FE319B18A4B39700B4D1DE /* ball80.png in Resources */,
+				8345BB6018A89C9700CDC45F /* imagine_font.otf in Resources */,
 				83FE31A118A4BC7F00B4D1DE /* joystick_normal.png in Resources */,
 				83FE31A018A4BC7F00B4D1DE /* joystick_hold.png in Resources */,
 			);
@@ -294,6 +303,7 @@
 				83FE317018A4ABA000B4D1DE /* JBAppDelegate.m in Sources */,
 				83FE317618A4ABA000B4D1DE /* JBViewController.m in Sources */,
 				83FE317918A4ABA000B4D1DE /* JBMyScene.m in Sources */,
+				8345BB5E18A89B8C00CDC45F /* JBMenuViewController.m in Sources */,
 				83FE316C18A4ABA000B4D1DE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
