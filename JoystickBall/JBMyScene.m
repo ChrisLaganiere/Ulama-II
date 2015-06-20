@@ -14,6 +14,8 @@
 #define forceVar 25
 #define initialMaxStars 2
 
+#define scoreFontSize (isIpad ? 45 : 30)
+
 @interface JBMyScene()
 
 @property SKSpriteNode *joystickBase;
@@ -36,7 +38,6 @@
 @implementation JBMyScene
 
 
-
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
@@ -46,7 +47,7 @@
                                 0.390625 alpha:1.0];
         self.anchorPoint = CGPointMake (0.5,0.5);
         
-        CGRect myFrame = CGRectMake(2*self.frame.origin.x,2*self.frame.origin.y, self.frame.size.width, self.frame.size.height); //adjusting for anchorpoint
+        CGRect myFrame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height); //adjusting for anchorpoint
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:myFrame];
         self.physicsBody.categoryBitMask = edgeCategory;
         self.physicsBody.collisionBitMask = 0;
@@ -77,11 +78,11 @@
         
         self.score = 0;
         SKLabelNode *scoreReport = [SKLabelNode labelNodeWithFontNamed:@"Imagine Font"];
-        scoreReport.fontSize = 45.0;
+        scoreReport.fontSize = scoreFontSize;
         scoreReport.fontColor = [UIColor whiteColor];
         scoreReport.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeRight;
         scoreReport.verticalAlignmentMode = SKLabelVerticalAlignmentModeTop;
-        scoreReport.position = CGPointMake(self.frame.size.width/2-45,self.frame.size.height/2-45);
+        scoreReport.position = CGPointMake(self.frame.size.width/2-scoreFontSize,self.frame.size.height/2-45);
         scoreReport.text = [NSString stringWithFormat:@"%i",self.score];
         [self addChild:scoreReport];
         self.scoreReport = scoreReport;
@@ -174,7 +175,7 @@
     
     if (self.starTimer < 1) {
         [self addStar];
-        self.starTimer = arc4random() % starTimerMax;
+        self.starTimer = arc4random() % (starTimerMax-MIN(_maxStars, 100));
     } else {
         self.starTimer--;
     }
@@ -320,8 +321,8 @@
     highscore.text = [NSString stringWithFormat:@"Score: %i\n", self.score];
     highscore.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
     highscore.verticalAlignmentMode = SKLabelVerticalAlignmentModeTop;
-    highscore.fontSize = 45;
-    highscore.position = CGPointMake(-self.frame.size.width/2+45, self.frame.size.height/2-45);
+    highscore.fontSize = scoreFontSize;
+    highscore.position = CGPointMake(-self.frame.size.width/2+scoreFontSize, self.frame.size.height/2-45);
     [highscore runAction:[SKAction sequence:@[
                                               [SKAction waitForDuration:3.0],
                                               [SKAction fadeAlphaBy:-1.0 duration:2.0]
@@ -336,8 +337,9 @@
     scoreLabel.text = [NSString stringWithFormat:@"High: %li\n", (long)[[NSUserDefaults standardUserDefaults] integerForKey:@"highscore"]];
     scoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
     scoreLabel.verticalAlignmentMode = SKLabelVerticalAlignmentModeTop;
-    scoreLabel.fontSize = 45;
-    scoreLabel.position = CGPointMake(-self.frame.size.width/2+45, self.frame.size.height/2-100);
+    scoreLabel.fontSize = scoreFontSize;
+    CGFloat labelPosDiff = isIpad ? 100 : 80;
+    scoreLabel.position = CGPointMake(-self.frame.size.width/2+scoreFontSize, self.frame.size.height/2-labelPosDiff);
     [scoreLabel runAction:[SKAction sequence:@[
                                               [SKAction waitForDuration:3.0],
                                               [SKAction fadeAlphaBy:-1.0 duration:2.0]
@@ -358,7 +360,6 @@
         self.starCounter--;
     }];
     
-    NSLog(@"game over");
     CGFloat hue = ( arc4random() % 256 / 256.0 ); // 0.0 to 1.0
     CGFloat saturation = ( arc4random() % 128 / (128/0.2) ) + 0.8; // 0.5 to 1.0, away from white
     CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5; // 0.5 to 1.0, away from black

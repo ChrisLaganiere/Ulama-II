@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0500"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "83FE315918A4ABA000B4D1DE"
-               BuildableName = "JoystickBall.app"
-               BlueprintName = "JoystickBall"
-               ReferencedContainer = "container:JoystickBall.xcodeproj">
+               BuildableName = "Ulama II.app"
+               BlueprintName = "Ulama II"
+               ReferencedContainer = "container:Ulama II.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "83FE318118A4ABA000B4D1DE"
-               BuildableName = "JoystickBallTests.xctest"
-               BlueprintName = "JoystickBallTests"
-               ReferencedContainer = "container:JoystickBall.xcodeproj">
+               BuildableName = "Ulama IITests.xctest"
+               BlueprintName = "Ulama IITests"
+               ReferencedContainer = "container:Ulama II.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "83FE315918A4ABA000B4D1DE"
-            BuildableName = "JoystickBall.app"
-            BlueprintName = "JoystickBall"
-            ReferencedContainer = "container:JoystickBall.xcodeproj">
+            BuildableName = "Ulama II.app"
+            BlueprintName = "Ulama II"
+            ReferencedContainer = "container:Ulama II.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -58,13 +58,14 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "83FE315918A4ABA000B4D1DE"
-            BuildableName = "JoystickBall.app"
-            BlueprintName = "JoystickBall"
-            ReferencedContainer = "container:JoystickBall.xcodeproj">
+            BuildableName = "Ulama II.app"
+            BlueprintName = "Ulama II"
+            ReferencedContainer = "container:Ulama II.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -76,13 +77,14 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "83FE315918A4ABA000B4D1DE"
-            BuildableName = "JoystickBall.app"
-            BlueprintName = "JoystickBall"
-            ReferencedContainer = "container:JoystickBall.xcodeproj">
+            BuildableName = "Ulama II.app"
+            BlueprintName = "Ulama II"
+            ReferencedContainer = "container:Ulama II.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

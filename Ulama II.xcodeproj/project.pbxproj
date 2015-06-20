@@ -11,6 +11,32 @@
 		8345BB5E18A89B8C00CDC45F /* JBMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8345BB5D18A89B8C00CDC45F /* JBMenuViewController.m */; };
 		8345BB6018A89C9700CDC45F /* imagine_font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8345BB5F18A89C9700CDC45F /* imagine_font.otf */; };
 		8345BB6218A8AEAC00CDC45F /* ball80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8345BB6118A8AEAC00CDC45F /* ball80@2x.png */; };
+		83A292731B35F77F00820988 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A292601B35F77F00820988 /* Icon-40.png */; };
+		83A292741B35F77F00820988 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A292611B35F77F00820988 /* Icon-40@2x.png */; };
+		83A292751B35F77F00820988 /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A292621B35F77F00820988 /* Icon-40@3x.png */; };
+		83A292761B35F77F00820988 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A292631B35F77F00820988 /* Icon-60.png */; };
+		83A292771B35F77F00820988 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A292641B35F77F00820988 /* Icon-60@2x.png */; };
+		83A292781B35F77F00820988 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A292651B35F77F00820988 /* Icon-60@3x.png */; };
+		83A292791B35F77F00820988 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A292661B35F77F00820988 /* Icon-72.png */; };
+		83A2927A1B35F77F00820988 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A292671B35F77F00820988 /* Icon-72@2x.png */; };
+		83A2927B1B35F77F00820988 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A292681B35F77F00820988 /* Icon-76.png */; };
+		83A2927C1B35F77F00820988 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A292691B35F77F00820988 /* Icon-76@2x.png */; };
+		83A2927D1B35F77F00820988 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A2926A1B35F77F00820988 /* Icon-Small-50.png */; };
+		83A2927E1B35F77F00820988 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A2926B1B35F77F00820988 /* Icon-Small-50@2x.png */; };
+		83A2927F1B35F77F00820988 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A2926C1B35F77F00820988 /* Icon-Small.png */; };
+		83A292801B35F77F00820988 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A2926D1B35F77F00820988 /* Icon-Small@2x.png */; };
+		83A292811B35F77F00820988 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A2926E1B35F77F00820988 /* Icon-Small@3x.png */; };
+		83A292821B35F77F00820988 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A2926F1B35F77F00820988 /* Icon.png */; };
+		83A292831B35F77F00820988 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A292701B35F77F00820988 /* Icon@2x.png */; };
+		83A292841B35F77F00820988 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A292711B35F77F00820988 /* iTunesArtwork.png */; };
+		83A292851B35F77F00820988 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A292721B35F77F00820988 /* iTunesArtwork@2x.png */; };
+		83A292871B35F9C300820988 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A292861B35F9C300820988 /* Default-568h@2x.png */; };
+		83A2928F1B36008A00820988 /* 3.5.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A292891B36008A00820988 /* 3.5.png */; };
+		83A292901B36008A00820988 /* 4.0.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A2928A1B36008A00820988 /* 4.0.png */; };
+		83A292911B36008A00820988 /* 4.7.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A2928B1B36008A00820988 /* 4.7.png */; };
+		83A292921B36008A00820988 /* 5.5.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A2928C1B36008A00820988 /* 5.5.png */; };
+		83A292931B36008A00820988 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A2928D1B36008A00820988 /* iPad.png */; };
+		83A292941B36008A00820988 /* iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A2928E1B36008A00820988 /* iPad@2x.png */; };
 		83FE315E18A4ABA000B4D1DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FE315D18A4ABA000B4D1DE /* Foundation.framework */; };
 		83FE316018A4ABA000B4D1DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FE315F18A4ABA000B4D1DE /* CoreGraphics.framework */; };
 		83FE316218A4ABA000B4D1DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FE316118A4ABA000B4D1DE /* UIKit.framework */; };
@@ -49,15 +75,41 @@
 		8345BB5D18A89B8C00CDC45F /* JBMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBMenuViewController.m; sourceTree = "<group>"; };
 		8345BB5F18A89C9700CDC45F /* imagine_font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = imagine_font.otf; sourceTree = "<group>"; };
 		8345BB6118A8AEAC00CDC45F /* ball80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball80@2x.png"; sourceTree = "<group>"; };
-		83FE315A18A4ABA000B4D1DE /* JoystickBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JoystickBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A292601B35F77F00820988 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		83A292611B35F77F00820988 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		83A292621B35F77F00820988 /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
+		83A292631B35F77F00820988 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		83A292641B35F77F00820988 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		83A292651B35F77F00820988 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		83A292661B35F77F00820988 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		83A292671B35F77F00820988 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		83A292681B35F77F00820988 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		83A292691B35F77F00820988 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		83A2926A1B35F77F00820988 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		83A2926B1B35F77F00820988 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		83A2926C1B35F77F00820988 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		83A2926D1B35F77F00820988 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		83A2926E1B35F77F00820988 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		83A2926F1B35F77F00820988 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		83A292701B35F77F00820988 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		83A292711B35F77F00820988 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		83A292721B35F77F00820988 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		83A292861B35F9C300820988 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		83A292891B36008A00820988 /* 3.5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.5.png; sourceTree = "<group>"; };
+		83A2928A1B36008A00820988 /* 4.0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.0.png; sourceTree = "<group>"; };
+		83A2928B1B36008A00820988 /* 4.7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.7.png; sourceTree = "<group>"; };
+		83A2928C1B36008A00820988 /* 5.5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.5.png; sourceTree = "<group>"; };
+		83A2928D1B36008A00820988 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad.png; sourceTree = "<group>"; };
+		83A2928E1B36008A00820988 /* iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPad@2x.png"; sourceTree = "<group>"; };
+		83FE315A18A4ABA000B4D1DE /* Ulama II.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ulama II.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FE315D18A4ABA000B4D1DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83FE315F18A4ABA000B4D1DE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		83FE316118A4ABA000B4D1DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83FE316318A4ABA000B4D1DE /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		83FE316718A4ABA000B4D1DE /* JoystickBall-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JoystickBall-Info.plist"; sourceTree = "<group>"; };
+		83FE316718A4ABA000B4D1DE /* Ulama II-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ulama II-Info.plist"; sourceTree = "<group>"; };
 		83FE316918A4ABA000B4D1DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		83FE316B18A4ABA000B4D1DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		83FE316D18A4ABA000B4D1DE /* JoystickBall-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JoystickBall-Prefix.pch"; sourceTree = "<group>"; };
+		83FE316D18A4ABA000B4D1DE /* Ulama II-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ulama II-Prefix.pch"; sourceTree = "<group>"; };
 		83FE316E18A4ABA000B4D1DE /* JBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBAppDelegate.h; sourceTree = "<group>"; };
 		83FE316F18A4ABA000B4D1DE /* JBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBAppDelegate.m; sourceTree = "<group>"; };
 		83FE317218A4ABA000B4D1DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,9 +118,9 @@
 		83FE317718A4ABA000B4D1DE /* JBMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBMyScene.h; sourceTree = "<group>"; };
 		83FE317818A4ABA000B4D1DE /* JBMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBMyScene.m; sourceTree = "<group>"; };
 		83FE317C18A4ABA000B4D1DE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		83FE318218A4ABA000B4D1DE /* JoystickBallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JoystickBallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83FE318218A4ABA000B4D1DE /* Ulama IITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ulama IITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FE318318A4ABA000B4D1DE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		83FE318B18A4ABA000B4D1DE /* JoystickBallTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JoystickBallTests-Info.plist"; sourceTree = "<group>"; };
+		83FE318B18A4ABA000B4D1DE /* Ulama IITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ulama IITests-Info.plist"; sourceTree = "<group>"; };
 		83FE318D18A4ABA000B4D1DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		83FE318F18A4ABA000B4D1DE /* JoystickBallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JoystickBallTests.m; sourceTree = "<group>"; };
 		83FE319A18A4B39700B4D1DE /* ball80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball80.png; sourceTree = "<group>"; };
@@ -102,9 +154,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83A2925F1B35F77F00820988 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				83A292601B35F77F00820988 /* Icon-40.png */,
+				83A292611B35F77F00820988 /* Icon-40@2x.png */,
+				83A292621B35F77F00820988 /* Icon-40@3x.png */,
+				83A292631B35F77F00820988 /* Icon-60.png */,
+				83A292641B35F77F00820988 /* Icon-60@2x.png */,
+				83A292651B35F77F00820988 /* Icon-60@3x.png */,
+				83A292661B35F77F00820988 /* Icon-72.png */,
+				83A292671B35F77F00820988 /* Icon-72@2x.png */,
+				83A292681B35F77F00820988 /* Icon-76.png */,
+				83A292691B35F77F00820988 /* Icon-76@2x.png */,
+				83A2926A1B35F77F00820988 /* Icon-Small-50.png */,
+				83A2926B1B35F77F00820988 /* Icon-Small-50@2x.png */,
+				83A2926C1B35F77F00820988 /* Icon-Small.png */,
+				83A2926D1B35F77F00820988 /* Icon-Small@2x.png */,
+				83A2926E1B35F77F00820988 /* Icon-Small@3x.png */,
+				83A2926F1B35F77F00820988 /* Icon.png */,
+				83A292701B35F77F00820988 /* Icon@2x.png */,
+				83A292711B35F77F00820988 /* iTunesArtwork.png */,
+				83A292721B35F77F00820988 /* iTunesArtwork@2x.png */,
+			);
+			path = icon;
+			sourceTree = "<group>";
+		};
+		83A292881B36008A00820988 /* launch image */ = {
+			isa = PBXGroup;
+			children = (
+				83A292891B36008A00820988 /* 3.5.png */,
+				83A2928A1B36008A00820988 /* 4.0.png */,
+				83A2928B1B36008A00820988 /* 4.7.png */,
+				83A2928C1B36008A00820988 /* 5.5.png */,
+				83A2928D1B36008A00820988 /* iPad.png */,
+				83A2928E1B36008A00820988 /* iPad@2x.png */,
+			);
+			path = "launch image";
+			sourceTree = "<group>";
+		};
 		83FE315118A4ABA000B4D1DE = {
 			isa = PBXGroup;
 			children = (
+				83A292861B35F9C300820988 /* Default-568h@2x.png */,
 				83FE316518A4ABA000B4D1DE /* JoystickBall */,
 				83FE318918A4ABA000B4D1DE /* JoystickBallTests */,
 				83FE315C18A4ABA000B4D1DE /* Frameworks */,
@@ -115,8 +207,8 @@
 		83FE315B18A4ABA000B4D1DE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83FE315A18A4ABA000B4D1DE /* JoystickBall.app */,
-				83FE318218A4ABA000B4D1DE /* JoystickBallTests.xctest */,
+				83FE315A18A4ABA000B4D1DE /* Ulama II.app */,
+				83FE318218A4ABA000B4D1DE /* Ulama IITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,10 +248,10 @@
 		83FE316618A4ABA000B4D1DE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				83FE316718A4ABA000B4D1DE /* JoystickBall-Info.plist */,
+				83FE316718A4ABA000B4D1DE /* Ulama II-Info.plist */,
 				83FE316818A4ABA000B4D1DE /* InfoPlist.strings */,
 				83FE316B18A4ABA000B4D1DE /* main.m */,
-				83FE316D18A4ABA000B4D1DE /* JoystickBall-Prefix.pch */,
+				83FE316D18A4ABA000B4D1DE /* Ulama II-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -176,7 +268,7 @@
 		83FE318A18A4ABA000B4D1DE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				83FE318B18A4ABA000B4D1DE /* JoystickBallTests-Info.plist */,
+				83FE318B18A4ABA000B4D1DE /* Ulama IITests-Info.plist */,
 				83FE318C18A4ABA000B4D1DE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -185,6 +277,8 @@
 		83FE319918A4B39700B4D1DE /* images */ = {
 			isa = PBXGroup;
 			children = (
+				83A292881B36008A00820988 /* launch image */,
+				83A2925F1B35F77F00820988 /* icon */,
 				832368E618A5E9F60077CDAA /* joystickBase@2x.png */,
 				83FE319E18A4BC7F00B4D1DE /* joystick_hold.png */,
 				83FE319F18A4BC7F00B4D1DE /* joystick_normal.png */,
@@ -198,9 +292,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		83FE315918A4ABA000B4D1DE /* JoystickBall */ = {
+		83FE315918A4ABA000B4D1DE /* Ulama II */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83FE319318A4ABA000B4D1DE /* Build configuration list for PBXNativeTarget "JoystickBall" */;
+			buildConfigurationList = 83FE319318A4ABA000B4D1DE /* Build configuration list for PBXNativeTarget "Ulama II" */;
 			buildPhases = (
 				83FE315618A4ABA000B4D1DE /* Sources */,
 				83FE315718A4ABA000B4D1DE /* Frameworks */,
@@ -210,14 +304,14 @@
 			);
 			dependencies = (
 			);
-			name = JoystickBall;
+			name = "Ulama II";
 			productName = JoystickBall;
-			productReference = 83FE315A18A4ABA000B4D1DE /* JoystickBall.app */;
+			productReference = 83FE315A18A4ABA000B4D1DE /* Ulama II.app */;
 			productType = "com.apple.product-type.application";
 		};
-		83FE318118A4ABA000B4D1DE /* JoystickBallTests */ = {
+		83FE318118A4ABA000B4D1DE /* Ulama IITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83FE319618A4ABA000B4D1DE /* Build configuration list for PBXNativeTarget "JoystickBallTests" */;
+			buildConfigurationList = 83FE319618A4ABA000B4D1DE /* Build configuration list for PBXNativeTarget "Ulama IITests" */;
 			buildPhases = (
 				83FE317E18A4ABA000B4D1DE /* Sources */,
 				83FE317F18A4ABA000B4D1DE /* Frameworks */,
@@ -228,9 +322,9 @@
 			dependencies = (
 				83FE318818A4ABA000B4D1DE /* PBXTargetDependency */,
 			);
-			name = JoystickBallTests;
+			name = "Ulama IITests";
 			productName = JoystickBallTests;
-			productReference = 83FE318218A4ABA000B4D1DE /* JoystickBallTests.xctest */;
+			productReference = 83FE318218A4ABA000B4D1DE /* Ulama IITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -240,15 +334,18 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = JB;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Chris Laganiere";
 				TargetAttributes = {
+					83FE315918A4ABA000B4D1DE = {
+						DevelopmentTeam = DGUKNK322A;
+					};
 					83FE318118A4ABA000B4D1DE = {
 						TestTargetID = 83FE315918A4ABA000B4D1DE;
 					};
 				};
 			};
-			buildConfigurationList = 83FE315518A4ABA000B4D1DE /* Build configuration list for PBXProject "JoystickBall" */;
+			buildConfigurationList = 83FE315518A4ABA000B4D1DE /* Build configuration list for PBXProject "Ulama II" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -261,8 +358,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				83FE315918A4ABA000B4D1DE /* JoystickBall */,
-				83FE318118A4ABA000B4D1DE /* JoystickBallTests */,
+				83FE315918A4ABA000B4D1DE /* Ulama II */,
+				83FE318118A4ABA000B4D1DE /* Ulama IITests */,
 			);
 		};
 /* End PBXProject section */
@@ -273,13 +370,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				83FE319D18A4B8C800B4D1DE /* joystickBase.png in Resources */,
+				83A292831B35F77F00820988 /* Icon@2x.png in Resources */,
+				83A292921B36008A00820988 /* 5.5.png in Resources */,
+				83A2927D1B35F77F00820988 /* Icon-Small-50.png in Resources */,
+				83A2927F1B35F77F00820988 /* Icon-Small.png in Resources */,
+				83A2927A1B35F77F00820988 /* Icon-72@2x.png in Resources */,
+				83A292801B35F77F00820988 /* Icon-Small@2x.png in Resources */,
 				83FE316A18A4ABA000B4D1DE /* InfoPlist.strings in Resources */,
 				83FE317D18A4ABA000B4D1DE /* Images.xcassets in Resources */,
+				83A292751B35F77F00820988 /* Icon-40@3x.png in Resources */,
+				83A292941B36008A00820988 /* iPad@2x.png in Resources */,
 				832368E718A5E9F60077CDAA /* joystickBase@2x.png in Resources */,
+				83A292781B35F77F00820988 /* Icon-60@3x.png in Resources */,
 				83FE317318A4ABA000B4D1DE /* Main.storyboard in Resources */,
+				83A292901B36008A00820988 /* 4.0.png in Resources */,
+				83A292871B35F9C300820988 /* Default-568h@2x.png in Resources */,
+				83A292821B35F77F00820988 /* Icon.png in Resources */,
+				83A292811B35F77F00820988 /* Icon-Small@3x.png in Resources */,
+				83A292851B35F77F00820988 /* iTunesArtwork@2x.png in Resources */,
+				83A2928F1B36008A00820988 /* 3.5.png in Resources */,
 				8345BB6218A8AEAC00CDC45F /* ball80@2x.png in Resources */,
 				83FE319B18A4B39700B4D1DE /* ball80.png in Resources */,
+				83A292931B36008A00820988 /* iPad.png in Resources */,
+				83A292771B35F77F00820988 /* Icon-60@2x.png in Resources */,
+				83A292841B35F77F00820988 /* iTunesArtwork.png in Resources */,
+				83A292731B35F77F00820988 /* Icon-40.png in Resources */,
+				83A292791B35F77F00820988 /* Icon-72.png in Resources */,
+				83A292911B36008A00820988 /* 4.7.png in Resources */,
+				83A292761B35F77F00820988 /* Icon-60.png in Resources */,
+				83A2927C1B35F77F00820988 /* Icon-76@2x.png in Resources */,
+				83A2927E1B35F77F00820988 /* Icon-Small-50@2x.png in Resources */,
 				8345BB6018A89C9700CDC45F /* imagine_font.otf in Resources */,
+				83A2927B1B35F77F00820988 /* Icon-76.png in Resources */,
+				83A292741B35F77F00820988 /* Icon-40@2x.png in Resources */,
 				83FE31A118A4BC7F00B4D1DE /* joystick_normal.png in Resources */,
 				83FE31A018A4BC7F00B4D1DE /* joystick_hold.png in Resources */,
 			);
@@ -321,7 +444,7 @@
 /* Begin PBXTargetDependency section */
 		83FE318818A4ABA000B4D1DE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 83FE315918A4ABA000B4D1DE /* JoystickBall */;
+			target = 83FE315918A4ABA000B4D1DE /* Ulama II */;
 			targetProxy = 83FE318718A4ABA000B4D1DE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -358,7 +481,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -371,7 +493,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Christopher Laganiere (6EN5YZJ6J8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Christopher Laganiere (6EN5YZJ6J8)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -389,6 +512,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Ulama II";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -398,7 +522,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -411,7 +534,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Christopher Laganiere (6EN5YZJ6J8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Christopher Laganiere (6EN5YZJ6J8)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -422,6 +546,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "Ulama II";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -433,10 +558,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JoystickBall/JoystickBall-Prefix.pch";
-				INFOPLIST_FILE = "JoystickBall/JoystickBall-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "JoystickBall/Ulama II-Prefix.pch";
+				INFOPLIST_FILE = "JoystickBall/Ulama II-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "Ulama II";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -448,10 +577,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JoystickBall/JoystickBall-Prefix.pch";
-				INFOPLIST_FILE = "JoystickBall/JoystickBall-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "JoystickBall/Ulama II-Prefix.pch";
+				INFOPLIST_FILE = "JoystickBall/Ulama II-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "Ulama II";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -461,7 +594,6 @@
 		83FE319718A4ABA000B4D1DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JoystickBall.app/JoystickBall";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -474,8 +606,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "JoystickBallTests/JoystickBallTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "JoystickBallTests/Ulama IITests-Info.plist";
+				PRODUCT_NAME = "Ulama IITests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -484,7 +616,6 @@
 		83FE319818A4ABA000B4D1DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JoystickBall.app/JoystickBall";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -493,8 +624,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JoystickBall/JoystickBall-Prefix.pch";
-				INFOPLIST_FILE = "JoystickBallTests/JoystickBallTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "JoystickBallTests/Ulama IITests-Info.plist";
+				PRODUCT_NAME = "Ulama IITests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -503,7 +634,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		83FE315518A4ABA000B4D1DE /* Build configuration list for PBXProject "JoystickBall" */ = {
+		83FE315518A4ABA000B4D1DE /* Build configuration list for PBXProject "Ulama II" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83FE319118A4ABA000B4D1DE /* Debug */,
@@ -512,7 +643,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83FE319318A4ABA000B4D1DE /* Build configuration list for PBXNativeTarget "JoystickBall" */ = {
+		83FE319318A4ABA000B4D1DE /* Build configuration list for PBXNativeTarget "Ulama II" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83FE319418A4ABA000B4D1DE /* Debug */,
@@ -521,7 +652,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83FE319618A4ABA000B4D1DE /* Build configuration list for PBXNativeTarget "JoystickBallTests" */ = {
+		83FE319618A4ABA000B4D1DE /* Build configuration list for PBXNativeTarget "Ulama IITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83FE319718A4ABA000B4D1DE /* Debug */,
